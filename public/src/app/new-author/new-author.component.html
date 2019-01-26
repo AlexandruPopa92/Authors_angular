@@ -1,0 +1,9 @@
+<a href="/" class="btn btn-primary">Home</a>
+<h4>Add a new author:</h4>
+<form (submit)="AddAuthor()">
+  <p style="color:red" *ngIf="error">{{error.name.message}}</p>
+  <label>Name</label>
+  <input type="text" name="newAuthor.name" [(ngModel)]="newAuthor.name" class="form-control col-md-6"><br>
+  <input type="submit" value="Cancel" class="btn btn-primary" [routerLink]="['/']">
+  <input type="submit" value="Submit" class="btn btn-success">
+</form>

@@ -1,0 +1,20 @@
+<button [routerLink]="['/new']" class="btn btn-primary">Add an author</button>
+<br>
+<br>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Author</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody *ngIf="all_authors">
+    <tr *ngFor="let a of all_authors">
+      <td>{{a.name}}</td>
+      <td>
+        <button class="btn btn-success" [routerLink]="['/edit',(a._id)]">Edit</button>
+        <button class="btn btn-danger" (click)="Delete(a._id)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+</table>

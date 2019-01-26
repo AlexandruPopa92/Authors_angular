@@ -1,0 +1,8 @@
+<a href="/" class="btn btn-primary">Home</a>
+<h4>Edit this author:</h4>
+<form (submit)="UpdateAuthor(one_author._id)">
+  <label>Name</label>
+  <input type="text" name="one_author.name" [(ngModel)]="one_author.name" [placeholder]="one_author.name" class="form-control col-md-6"><br>
+  <a class="btn btn-primary" [routerLink]="['/']">Cancel</a>
+  <input type="submit" value="Submit" class="btn btn-success">
+</form>
